@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/eab7817d0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Dashboard</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../src/styling/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <section class="nav-section">
+          <img src="../src/images/logo.png" alt="Logo" />
+          <nav>
+            <ul>
+              <li class="active"><a href="index.html">General Info</a></li>
+              <li><a href="summary.html">Summary</a></li>
+              <li><a href="analytics.html">Analytics</a></li>
+              <li><a href="information.html">Information</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <section class="user">
+            <img
+              src="https://images.pexels.com/photos/6256231/pexels-photo-6256231.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Profile picture"
+            />
+            <a href="#">Mr. Thompson Anderson</a>
+          </section>
+        </section>
+        <article class="content-section">
+          <div class="grid-container-content">
+            <div class="decibel-graph">
+              <div class="content-titles">
+                <div class="content-headings">
+                  <h3>decibel graph</h3>
+                  <p>(Latest 12 days)</p>
+                </div>
+                <a href="#" id="openModalBtn"><i class="fa-solid fa-circle-info"></i></a>
+
+                <div id="myModal">
+                  <div class="modal-content">
+                    <div class="modal-heading">
+                      <h3>Last 12 days</h3>
+                      <i
+                        id="closeModalBtn"
+                        class="fa-solid fa-circle-xmark"
+                      ></i>
+                    </div>
+                    <div class="modal-months">
+                        <p>   
+                          In your data collected over the past 12 days, it's evident that decibel levels in your school gym hall consistently peak around 11:00 and 14:00. This trend suggests a recurring pattern of increased noise during specific time frames. One plausible explanation for this pattern might be the heightened activity levels during breaks or physical education classes throughout the observed period.</p><br><p> To address this issue, especially considering your 12-day data set, potential solutions involve implementing soundproofing measures like acoustic panels and noise-absorbing flooring. Additionally, adjusting the scheduling of activities and creating designated workout zones could contribute to a quieter and more focused environment in the school gym halls over the long term.
+                        </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="scatter-chart">
+                <canvas id="scatter"></canvas>
+              </div>
+            </div>
+            <div class="hourly-graph">
+              <div class="content-titles">
+                <div class="content-headings">
+                  <h3>hourly graph</h3>
+                  <p>(Latest 12 days)</p>
+                </div>
+                <div class="content-arrows">
+                  <a href=""><i class="fa-solid fa-circle-chevron-left"></i></a>
+                  <a href=""
+                    ><i class="fa-solid fa-circle-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="chart">
+                <canvas id="barChart"></canvas>
+              </div>
+            </div>
+            <div class="line-graph">
+              <div class="chart">
+                <canvas id="lineChart" height="40%"></canvas>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/script.js"></script>
+    <script src="/linechart.js"></script>
+  </body>
+</html>
